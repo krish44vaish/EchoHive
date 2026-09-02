@@ -1,0 +1,24 @@
+.lowerSection {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profilePageNav{
+    display: flex;
+}
+.profilePageNav span{
+    padding: 15px 20px;
+    transition: all 0.3s ease-in-out;
+}
+.profilePageNav span:hover{
+    background-color: #323232;
+}
+.selected{
+    border-bottom: 1px solid #1D9BF0;
+}
+
+.linkStyles{
+    text-decoration: none;
+}

@@ -1,0 +1,119 @@
+.notificationSidebar {
+    position: fixed;
+    top: 0;
+    left: 269px;
+    bottom: 0;
+    width: 350px;
+    background: var(--sidebar-bg, #1e1e1e);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    transform: translateX(-100%);
+    animation: slideIn 0.3s forwards;
+    z-index: 101;
+}
+
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+.notificationHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.notificationContent {
+    padding: 10px 0;
+    overflow-y: auto;
+    height: calc(100% - 100px);
+}
+
+.notificationItem {
+    display: flex;
+    gap: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.notificationContent>.notificationItem:not(:last-child){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.notificationItem:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.notificationAvatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.notificationMeta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.notificationTime {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.notificationMessage {
+    color: #ddd;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.notificationDetails button{
+    margin-top: 5px;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 15px;
+    background-color: black;
+}
+
+.addedFriend{
+    background-color: white !important;
+    color: black;
+    font-weight: 600;
+}
+
+.notificationCircle {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(146, 144, 144);
+    border-radius: 8px;
+}
+
+
+/* Responsive styles */
+@media (max-width: 1264px) {
+    .notificationSidebar {
+        left: 96px;
+    }
+}
+
+@media (max-width: 768px) {
+    .notificationSidebar {
+        display: none;
+    }
+}

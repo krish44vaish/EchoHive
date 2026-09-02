@@ -1,0 +1,114 @@
+.modal{
+    background-color: black;
+    position: fixed;
+    z-index: 101;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px white;
+}
+.modalTop{
+    display: flex;
+    font-size: 22px;
+    font-weight: 700;
+    width: 100%;
+    justify-content: flex-end;
+}
+.closeModal{
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+.question {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.emoji {
+    font-size: 24px;
+}
+
+.statement {
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* padding-top: 20px; */
+    font-weight: 600;
+    gap: 40px 85px;
+}
+
+.optionProfileImage {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.option {
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 0 4px white;
+    cursor: pointer;
+    position: relative;
+    background-clip: padding-box;
+    z-index: 1;
+}
+
+.option.selectedOption {
+    box-shadow: none;
+    border: 1px solid transparent; /* Original border becomes transparent */
+}
+
+.option.selectedOption::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    border-radius: 15px; /* Slightly larger to account for spread */
+    background: linear-gradient(45deg, #1D9BF0, #FC0585, #F91880);
+    padding: 2px; /* Creates the border effect */
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+.option:hover {
+    background-color: rgb(27, 27, 27);
+}
+
+.freezedOption {
+    opacity: 70%;
+}
+
+.freezedOption:hover {
+    background-color: black;
+}
+
+.selectedOption {
+    opacity: 100%;
+}
+
+.questionInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}

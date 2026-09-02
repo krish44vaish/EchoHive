@@ -1,0 +1,125 @@
+.poll,
+.freezedPoll {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.pollOption {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #29104b;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.pollOption:hover {
+    background-color: #3a1a5e;
+    transform: translateY(-1px);
+}
+
+.pollOption:active {
+    transform: translateY(0);
+}
+
+.freezedPollOption {
+    cursor: default;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #2f1b4a99;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.fillBar {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 100%;
+    background-color: rgba(89, 38, 38, 0.3);
+    transition: width 0.6s ease-out;
+}
+
+.highestVotes {
+    background-color: rgba(29, 155, 240, 0.15);
+    border: 1px solid rgba(29, 155, 240, 0.3);
+}
+
+.highestVotes .fillBar {
+    background-color: rgba(29, 155, 240, 0.3);
+}
+
+.userVote {
+    position: relative;
+    border: 2px solid rgba(240, 29, 142, 0.8);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+                0 0 10px rgba(240, 29, 142, 0.3);
+    animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+.userVote::after {
+    content: '✓ Your vote';
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    background: rgba(240, 29, 142, 0.9);
+    color: white;
+    font-size: 0.7em;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+                    0 0 10px rgba(240, 29, 142, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+                    0 0 15px rgba(240, 29, 142, 0.5);
+    }
+}
+
+/* Adjust the fill bar color for user vote */
+.userVote .fillBar {
+    background-color: rgba(240, 29, 142, 0.4) !important;
+}
+
+/* If it's both highest vote and user vote */
+.highestVotes.userVote {
+    border-color: rgba(29, 155, 240, 0.8);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+                0 0 10px rgba(29, 155, 240, 0.3);
+}
+
+.highestVotes.userVote::after {
+    background: linear-gradient(90deg, rgba(240, 29, 142, 0.9), rgba(29, 155, 240, 0.9));
+}
+
+.highestVotes.userVote .fillBar {
+    background-color: rgba(29, 155, 240, 0.4) !important;
+}
+
+.optionText {
+    font-weight: 500;
+    z-index: 2;
+}
+
+.voteCount {
+    font-size: 0.9em;
+    opacity: 0.8;
+    z-index: 2;
+}

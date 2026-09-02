@@ -1,0 +1,13 @@
+.spinner {
+    animation: fastSpin 0.5s linear infinite;
+    width: 24px;
+    height: 24px;
+    color: #3498db;
+    /* Customize color as needed */
+}
+
+@keyframes fastSpin {
+    100% {
+        transform: rotate(360deg);
+    }
+}

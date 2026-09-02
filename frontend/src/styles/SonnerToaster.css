@@ -1,0 +1,30 @@
+/* Add to your global CSS */
+.dark-toast {
+  border-radius: 12px !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* Success toast styling */
+[data-sonner-toast][data-type="success"] {
+  background: linear-gradient(135deg, rgb(5 46 22) 0%, rgb(20 83 45) 100%) !important;
+  border-color: rgb(34 197 94) !important;
+}
+
+/* Error toast styling */
+[data-sonner-toast][data-type="error"] {
+  background: linear-gradient(135deg, rgb(69 10 10) 0%, rgb(127 29 29) 100%) !important;
+  border-color: rgb(239 68 68) !important;
+}
+
+/* Warning toast styling */
+[data-sonner-toast][data-type="warning"] {
+  background: linear-gradient(135deg, rgb(69 26 3) 0%, rgb(146 64 14) 100%) !important;
+  border-color: rgb(251 146 60) !important;
+}
+
+/* Info toast styling */
+[data-sonner-toast][data-type="info"] {
+  background: linear-gradient(135deg, rgb(12 74 110) 0%, rgb(30 64 175) 100%) !important;
+  border-color: rgb(59 130 246) !important;
+}

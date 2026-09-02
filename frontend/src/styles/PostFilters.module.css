@@ -1,0 +1,51 @@
+.linkStyles {
+    text-decoration: none;
+    padding: 10px 55px;
+    font-size: 18px;
+}
+
+.linkStyles:hover {
+    background-color: #323232;
+}
+
+.selected {
+    border-bottom: 1px solid white;
+}
+
+.postFilters {
+    display: flex;
+}
+
+.postTypeFilters {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+  white-space: nowrap;
+}
+
+.postTypeFilters::-webkit-scrollbar {
+    display: none;
+  }  
+
+.filterBtn {
+    background: #222;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.filterBtn:hover,
+.filterBtn.active {
+    background: #444;
+}
+
+
+@media (max-width:1100px) {
+    .linkStyles {
+        padding: 10px 40px;
+    }
+}

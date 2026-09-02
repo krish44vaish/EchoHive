@@ -1,0 +1,91 @@
+.activityContainer {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 70%;
+    background-color: #000000;
+    height: 550px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #0b3653, black, #5a032e);
+    padding: 20px 15px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+   
+}
+
+
+.activityContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.activity {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.activity img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 17px;
+}
+
+.activityRight {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.activityTop {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.activityBottom{
+    width: 85%;
+    font-size: 14px;
+    opacity: 70%;
+}
+
+.activityContainer>.activity:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 60px; /* Adjust based on your image width */
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(107, 102, 102, 0.3) 20%,
+        rgba(107, 102, 102, 0.7) 50%,
+        rgba(107, 102, 102, 0.3) 80%,
+        transparent 100%
+    );
+}
+
+
+.loaderStyles{
+    flex: 1;
+    align-self: center;
+    padding: 150px 0;
+}
+
+.errorText{
+    flex: 1;
+    align-self: center;
+    padding: 150px 0;
+    font-size: 20px;
+    color: #fc0585;
+    text-shadow: 0 0 5px #fc0585de, 0 0 10px #fc0585a0;
+}

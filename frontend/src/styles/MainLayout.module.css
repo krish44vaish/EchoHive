@@ -1,0 +1,90 @@
+.appLayout {
+    display: flex;
+    position: relative; /* Needed for absolute positioning of notification sidebar */
+    min-height: 100vh;
+}
+
+.mainContent {
+    margin-left: 286px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-right: 400px;
+    width: 100%;
+    transition: filter 0.3s ease, margin-right 0.3s ease;
+}
+
+.rightBar {
+    position: fixed;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    transition: filter 0.3s ease, margin-right 0.3s ease;
+}
+
+.mainContent.blurred, .rightBar.blurred {
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+/* Notification Overlay */
+.notificationOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    display: none;
+}
+
+.notificationOverlay.visible {
+    display: block;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1500px) {
+    .mainContent {
+        margin-right: 350px;
+    }
+    .rightBar {
+        width: 350px;
+    }
+}
+
+@media (max-width: 1264px) {
+    .mainContent {
+        margin-left: 120px;
+        margin-right: 50px;
+    }
+    .rightBar {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .mainContent {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContent {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainContent {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+}
+
+/* Body lock when sidebar is open */
+.sidebarOpen {
+    overflow: hidden;
+}

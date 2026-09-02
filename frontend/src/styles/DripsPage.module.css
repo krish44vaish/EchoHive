@@ -1,0 +1,27 @@
+.dripsPage {
+  background-image: url('/assets/giphy.webp');
+  background-size: cover;        /* Cover entire area */
+  background-position: center;   /* Center the image */
+  background-repeat: no-repeat;  /* Avoid repeating */
+  min-height: 90vh;             /* Full height of screen */
+}
+
+.dripsPageNav{
+    display: flex;
+    justify-content: center;
+}
+.dripsPageNav span{
+    font-size: 20px;
+    padding: 15px 60px;
+    transition: all 0.3s ease-in-out;
+}
+.dripsPageNav span:hover{
+    background-color: #323232;
+}
+.selected{
+    border-bottom: 1px solid #1D9BF0;
+}
+
+.linkStyles{
+    text-decoration: none;
+}

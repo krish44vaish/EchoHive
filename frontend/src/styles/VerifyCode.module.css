@@ -1,0 +1,90 @@
+
+
+.verifyPage {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    place-items: center;
+    background: linear-gradient(180deg, #250158, #121212);
+}
+
+.verifyForm {
+    padding: 60px 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formContainer {
+    background-color: #323232;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.btnStyles {
+    background-color: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+}
+
+
+.resendCode {
+    margin-top: 10px;
+}
+
+.resendCode span {
+    color: #4A90E2;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.verifyText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.verifyText p {
+    font-size: 26px;
+    font-weight: 1000;
+}
+
+.verifyText span {
+    font-size: 14px;
+}
+
+/* Styling for OTP input boxes */
+.otpInput input {
+    user-select: none !important;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 2px solid #4A90E2; /* Blue border */
+    padding: 0px 10px;
+    margin: 0px 10px;
+    border-radius: 8px;
+    background-color: #252525;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.otpInput input:focus {
+    border-color: #5DADE2; /* Lighter blue on focus */
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.7);
+}
+
+.otpInput input::placeholder {
+    color: #aaa;
+}

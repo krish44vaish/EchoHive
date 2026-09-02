@@ -1,0 +1,93 @@
+.editNotificationsSectionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 50px;
+    /* background-color: red; */
+}
+
+.editNotifications {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.toggleSwitch {
+    min-width: 50px;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #323232;
+}
+
+.toggleSwitchFilled {
+    background-color: white;
+}
+
+.toggleCircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 20px;
+    width: 20px;
+    border-radius: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+.NotifyOnNewCollegeUser {
+    transform: translateX(30px);
+}
+
+.editNotifications{
+    width: 80%;
+}
+
+.editNotificationItem {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 16px 25px;
+    border-radius: 20px;
+    border: 1px solid rgb(156, 155, 155);
+    width: 100%;
+    align-items: center;
+}
+
+.editNotificationItemLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.editNotificationItemLeft p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.editNotificationItemLeft span {
+    font-size: 14px;
+    color: rgb(172, 171, 171);
+    opacity: 80%;
+}
+@media (max-width: 1085px) {
+    .editNotifications{
+        width: 100%;
+    }
+}
+@media (max-width: 1085px) {
+    .editNotificationsSectionContainer{
+        padding-left: 0px;
+    }
+}
+@media (max-width: 768px) {
+    .editNotificationsSectionContainer{
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 625px) {
+    .longerDescription{
+        display: none;
+    }
+}

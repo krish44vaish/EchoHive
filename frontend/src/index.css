@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    color: white;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+/* Scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Width of the scrollbar */
+}
+
+/* Track (the background) */
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    /* Dark background */
+    border-radius: 10px;
+}
+
+/* Handle (the moving part) */
+::-webkit-scrollbar-thumb {
+    background: #323232;
+    /* Colorful gradient */
+    border-radius: 10px;
+}
+
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(94, 93, 93) #1e1e1e;
+}
+
+svg path {
+    transition: all 0.3s ease-in-out;
+}

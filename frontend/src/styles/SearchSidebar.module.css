@@ -1,0 +1,169 @@
+.searchSidebar {
+    position: fixed;
+    top: 0;
+    left: 269px;
+    bottom: 0;
+    width: 350px;
+    background: var(--sidebar-bg, #1e1e1e);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    transform: translateX(-100%);
+    animation: slideIn 0.3s forwards;
+    z-index: 101;
+}
+
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+.searchHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.searchContent {
+    padding: 10px 0;
+    overflow-y: auto;
+    height: calc(100% - 100px);
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    gap: 10px;
+    border: 1px solid #5f5f5f;
+    padding: 12px 17px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.searchBar input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+
+.searchItem {
+    display: flex;
+    gap: 12px;
+    padding: 12px 20px;
+    transition: background 0.2s ease;
+    position: relative;
+    /* background-color: green; */
+}
+
+.searchContent>.searchItem:not(:last-child) {
+    position: relative;
+    padding-bottom: 1px; /* Space for the border */
+    background-image: linear-gradient(to right, #323232, rgba(255, 255, 255, 0.3), #323232); /* Your gradient colors */
+    background-size: 100% 1px; /* Width: 100%, Height: 1px */
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.searchItem:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.searchAvatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.searchUserBio {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.bioText {
+    color: #888;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+}
+
+.searchUsername {
+    color: #ddd;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.searchDetails p {
+    cursor: pointer;
+}
+
+.searchDetails button {
+    margin-top: 5px;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 15px;
+    background-color: black;
+}
+
+.recentHeader{
+    padding: 0px 20px 10px 20px;
+    font-weight: 600;
+}
+
+.removeSearchedUser {
+    position: absolute;
+    right: 20px;
+    transform: scaleY(0.85);
+    font-size: 25px;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    cursor: pointer;
+    /* background: red; */
+}
+
+.error, .loading, .noResults{
+    font-size: 14px;
+    color: rgb(176, 176, 176);
+    opacity: 85%;
+    padding: 0px 18px;
+}
+
+/* Responsive styles */
+@media (max-width: 1264px) {
+    .searchSidebar {
+        left: 96px;
+    }
+}
+
+@media (max-width: 768px) {
+    .searchSidebar {
+        display: none;
+    }
+}

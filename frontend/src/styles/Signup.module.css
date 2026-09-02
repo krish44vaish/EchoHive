@@ -1,0 +1,199 @@
+
+.signupPage {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    place-items: center;
+    background: linear-gradient(180deg, #250158, #121212);
+}
+
+.signupForm {
+    padding: 60px 90px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 350px;
+}
+
+.formContainer {
+    background-color: #323232;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.btnStyles {
+    background-color: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+}
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.inputField input {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    background-color: black;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.passwordInput {
+    position: relative;
+}
+
+.passwordInput input {
+    padding-right: 50px;
+}
+
+.visibilityIcon {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.logoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.logoContainer p {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.signupText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signupText p {
+    font-size: 26px;
+    font-weight: 1000;
+}
+
+.signupText span {
+    font-size: 14px;
+}
+
+.collegeImage {
+    position: absolute;
+    border-radius: 0 50% 50% 0;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -190px;
+    background-color: #323232;
+}
+
+.collegeImage img {
+    width: 100px;
+    height: 100px;
+}
+
+
+.bulbImage {
+    position: absolute;
+    border-radius: 50% 0 0 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -190px;
+    bottom: 0px;
+    background-color: #323232;
+}
+
+.bulbImage img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+}
+
+.signupLogin {
+    margin-top: 10px;
+}
+
+.signupLogin span {
+    color: #4A90E2;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 915px) {
+    .form {
+        width: 250px;
+        gap: 15px;
+    }
+
+    .bulbImage {
+        width: 150px;
+        height: 150px;
+        left: -140px;
+    }
+
+    .bulbImage img {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .collegeImage {
+        width: 150px;
+        height: 150px;
+        right: -140px;
+    }
+
+    .collegeImage img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .signupForm{
+        padding: 50px 70px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .bulbImage,
+    .collegeImage {
+        display: none;
+    }
+}
