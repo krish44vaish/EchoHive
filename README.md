@@ -75,7 +75,7 @@ A social platform designed for college students to share content anonymously or 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/ambrollins619/EchoHive.git
+   git clone https://github.com/krish44vaish/EchoHive.git
    cd EchoHive
    ```
 2. **Backend Setup**
